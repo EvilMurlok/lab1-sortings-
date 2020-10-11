@@ -21,19 +21,6 @@ enum kindsOfSortings {
 
 int main() {
 	srand(time(NULL));
-	/*list<int> l;
-	size_t j = 0;
-	do
-	{
-		{
-			for (size_t i = 0; i < 25000000; ++i) {
-				l.push_back(rand() % 20000 - 10000);
-			}
-			cin >> j;
-		}
-
-	} while (j != 3);*/
-
 	cout << "Hello there!\nThis application let you to find out abount different kinds of sortings." << endl;
 	cout << "You can test:\n" <<
 			"1)Bubble sort\n" <<
@@ -173,14 +160,6 @@ int main() {
 			}
 		}
 	} while (tolower(yourChoise) != 'n');
-
-	
-
-	//ShellSort(a, [](int a, int b) { return a < b; });
-	//quickSort(a, 0, a.len() - 1, [](int b, int c) { return b < c; });
-	//mergeSort(a, [](int a, int b) { return a < b; });
-	//timeOfSort(a, [](int a, int b) { return a > b; }, "mergeSort");
-	//cout << a << endl;
 	return EXIT_SUCCESS;
 }
 

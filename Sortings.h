@@ -121,16 +121,16 @@ template <typename Sequence, typename Comparison>
 void quickSort(Sequence& seq, int first, int last, Comparison fcn) {
 	if (seq.len() < 1) { return; }
 	int f = first, l = last;
-	auto mid = seq[(f + l) / 2]; //вычисление опорного элемента
+	auto mid = seq[(f + l) / 2]; 
 	do {
-		while (fcn(seq[f], mid)) f++;
-		while (seq[l] != mid && !fcn(seq[l], mid)) l--;
-		if (f <= l) { //перестановка элементов
+		while (fcn(seq[f], mid)) ++f;
+		while (seq[l] != mid && !fcn(seq[l], mid)) --l;
+		if (f <= l) { 
 			auto count = seq[f];
 			seq[f] = seq[l];
 			seq[l] = count;
-			f++;
-			l--;
+			++f;
+			--l;
 		}
 	} while (f < l);
 	if (first < l) quickSort(seq, first, l, fcn);
