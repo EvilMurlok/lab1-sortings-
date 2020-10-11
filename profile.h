@@ -11,7 +11,6 @@
 #include <chrono>
 #include <iostream>
 #include <string>
-#include<algorithm> //it's only for 'transform'
 
 
 using namespace std::chrono;
@@ -47,7 +46,6 @@ void measureTimeOfSort(Sort fcn, const std::string& msg) {
 
 template <typename Sequence, typename Comperison>
 void timeOfSort(Sequence& seq, Comperison cmp,  std::string typeOfSort) {
-	std::transform(typeOfSort.begin(), typeOfSort.end(), typeOfSort.begin(), std::toupper);
 	if (typeOfSort == "INSERTIONSORT") {
 		measureTimeOfSort([&seq, cmp]() {insertionSort(seq, cmp); }, "The time of insertionSort with " + to_string(seq.len()) + " elements");
 	}

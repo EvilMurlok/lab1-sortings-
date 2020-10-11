@@ -24,7 +24,6 @@ public:
 	MyNode<T>* getNext() { return next; }
 	void setNext(MyNode<T>* nextToSet) { next = nextToSet; }
 
-	template<typename T>
 	friend std::ostream& operator<<(std::ostream& os, const MyNode<T>& nodeToOutput) {
 		os << nodeToOutput.data << ' ';
 		return os;
