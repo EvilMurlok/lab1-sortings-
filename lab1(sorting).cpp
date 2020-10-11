@@ -20,7 +20,7 @@ enum kindsOfSortings {
 	BUBBLESORT = 0, SHAKERSORT, SELECTIONSORT, INSERTIONSORT, GNOMESORT, MERGESORT, QUICKSORT, SHELLSORT
 };
 
-void tesNonPrimitivetype(size_t amount) {
+void testNonPrimitivetype(size_t amount) {
 	ArraySequence<Student> testArr;
 	ListSequence<Student> testList;
 	for (size_t i = 0; i < amount; ++i) {
